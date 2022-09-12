@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Tarjeta"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/bg_monedero_pantalla_principal"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp">
+
+        <TextView
+            android:id="@+id/txtTarjetas"
+            android:layout_width="241dp"
+            android:layout_height="76dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp"
+
+            android:layout_marginEnd="32dp"
+            android:fontFamily="sans-serif-thin"
+            android:text="Tarjetas"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="91dp"
+            android:layout_height="89dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="55dp"
+            android:contentDescription="TODO"
+            app:layout_constraintEnd_toStartOf="@+id/txtTarjetas"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_tarjeta" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/contenedor"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="sans-serif-thin"
+            android:padding="15dp"
+            android:scrollbars="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:text="Seleccione una tarjeta:"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.089"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/txtTarjetas" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+            <TextView
+                android:id="@+id/txtNumTarjeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Estaciones:"
+                android:textColor="@color/verdepetro"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/contenedor" />
+
+
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1"
+                android:drawSelectorOnTop="false"
+                android:fadeScrollbars="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtNumTarjeta" />
+
+            <TextView
+                android:id="@+id/txtCombustiblesAuto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Combustibles autorizados"
+                android:textColor="@color/verdepetro"
+                android:textSize="24sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <ListView
+                android:id="@+id/listProductos"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1"
+                android:drawSelectorOnTop="false"
+                android:fadeScrollbars="false" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tarjeta"
+                android:textColor="@color/verdepetro"
+                android:textSize="24sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <EditText
+                android:id="@+id/eTxtTarjeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:editable="false"
+                android:ems="10"
+                android:hint="Tarjeta"
+                android:inputType="none"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:id="@+id/txtPlacas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Placas"
+                android:textColor="@color/verdepetro"
+                android:textSize="24sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <EditText
+                android:id="@+id/editTextPlacas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:editable="false"
+                android:ems="10"
+                android:hint="Placas"
+                android:inputType="none"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:id="@+id/txtHorario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Horarios"
+                android:textColor="@color/verdepetro"
+                android:textSize="24sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical" >
+
+
+                <CheckBox
+                    android:id="@+id/checkBoxLunes"
+                    android:layout_width="103dp"
+                    android:layout_height="50dp"
+
+                    android:layout_marginEnd="35dp"
+                    android:buttonTint="@color/azulpetro"
+                    android:text="Lunes"
+                    app:layout_constraintEnd_toStartOf="@+id/checkBoxViernes"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxMartes"
+                    android:layout_width="103dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="35dp"
+                    android:buttonTint="@color/azulpetro"
+                    android:text="Martes"
+                    app:layout_constraintEnd_toStartOf="@+id/checkBoxSabado"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBoxLunes" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxMiercoles"
+                    android:layout_width="103dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="35dp"
+                    android:buttonTint="@color/azulpetro"
+                    android:text="Miercoles"
+                    app:layout_constraintEnd_toStartOf="@+id/checkBoxDomingo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBoxMartes" />
+                <CheckBox
+                    android:id="@+id/checkBoxJueves"
+                    android:layout_width="103dp"
+                    android:layout_height="50dp"
+                    android:buttonTint="@color/azulpetro"
+                    android:text="Jueves"
+                    app:layout_constraintEnd_toEndOf="@+id/checkBoxMiercoles"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBoxMiercoles" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxViernes"
+                    android:layout_width="103dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="8dp"
+                    android:buttonTint="@color/azulpetro"
+                    android:text="Viernes"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxSabado"
+                    android:layout_width="103dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="8dp"
+                    android:buttonTint="@color/azulpetro"
+                    android:text="Sabado"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBoxViernes" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxDomingo"
+                    android:layout_width="103dp"
+                    android:layout_height="50dp"
+                    android:buttonTint="@color/azulpetro"
+                    android:text="Domingo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBoxSabado" />
+
+
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="99dp"
+              >
+
+                <Button
+                    android:id="@+id/btnHoraInicio"
+                    android:layout_width="150dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="35dp"
+                    android:height="48dp"
+                    android:backgroundTint="@color/verdepetro"
+                    android:onClick="popTimePicker"
+                    android:text="Horario Inicio"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toStartOf="@+id/btnHoraFin"
+                    app:layout_constraintHorizontal_bias="0.3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btnHoraFin"
+                    android:layout_width="150dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="35dp"
+                    android:height="48dp"
+                    android:backgroundTint="@color/verdepetro"
+                    android:onClick="popTimePicker2"
+                    android:text="Horario Fin"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/txtPeriodo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tipo de periodo"
+                android:textColor="@color/verdepetro"
+                android:textSize="24sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <EditText
+                android:id="@+id/editTextPeriodo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:editable="false"
+                android:ems="10"
+                android:hint="Periodo"
+                android:inputType="none"/>
+
+            <TextView
+                android:id="@+id/txtLimite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Límite"
+                android:textColor="@color/verdepetro"
+                android:textSize="24sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <EditText
+                android:id="@+id/editTextLitros"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Litros"
+                android:inputType="textPersonName"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+
+
+            <EditText
+                android:id="@+id/editTextDinero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Dinero"
+                android:inputType="textPersonName"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+
+
+            <Button
+                android:id="@+id/btnActualizarTarjetas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/azulpetro"
+                android:text="Actualizar"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

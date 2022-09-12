@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RImpresionTicket"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="wrap_content"
+                android:layout_height="4dp"
+                android:layout_margin="24sp"
+                android:background="#997E7E7E" />
+
+            <TextView
+                android:id="@+id/textVNomEstacion"
+                android:layout_width="367dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textVCalle"
+                android:layout_width="367dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textVColonia"
+                android:layout_width="367dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textVRzonSocial"
+                android:layout_width="367dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textVRFC"
+                android:layout_width="367dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textSIIC"
+                android:layout_width="367dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="wrap_content"
+                android:layout_height="4dp"
+                android:layout_margin="24sp"
+                android:background="#997E7E7E" />
+
+
+            <LinearLayout
+                android:id="@+id/linearLayoutfechaCopia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+
+                <TextView
+                    android:id="@+id/fechaticket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Fecha: "
+                    android:textColor="@color/azulpetro"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/Tvtfechaticket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutfoliocopia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+
+                <TextView
+                    android:id="@+id/folioticket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Folio: "
+                    android:textColor="@color/azulpetro"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/Tvtfolioticket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayoutbomba"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+
+                <TextView
+                    android:id="@+id/bombaticket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Bomba: "
+                    android:textColor="@color/azulpetro"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/Tvtbombaticket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutproducto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+
+                <TextView
+                    android:id="@+id/productoticket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Producto: "
+                    android:textColor="@color/azulpetro"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/Tvtproductoticket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="wrap_content"
+                android:layout_height="4dp"
+                android:layout_margin="24sp"
+                android:layout_weight="1"
+                android:background="#997E7E7E" />
+
+
+            <LinearLayout
+                android:id="@+id/linearLayoutdatos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+
+                <TextView
+                    android:id="@+id/cantidadticket"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15sp"
+                    android:layout_marginEnd="10sp"
+                    android:text="Cantidad"
+                    android:textAlignment="center"
+                    android:textColor="@color/azulpetro"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/Tvtcantidadticket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="|"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/unidadticket"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1sp"
+                    android:layout_marginEnd="10sp"
+                    android:text="Unidad "
+                    android:textAlignment="center"
+                    android:textColor="@color/azulpetro"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/Tvtunidadticket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="|"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/precioticket"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1sp"
+                    android:layout_marginEnd="10sp"
+                    android:text="Precio"
+                    android:textAlignment="center"
+                    android:textColor="@color/azulpetro"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/Tvtprecioticket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="|"
+                    android:textAlignment="center"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/importeticket"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1sp"
+                    android:layout_marginEnd="10sp"
+                    android:textAlignment="center"
+                    android:text="Importe"
+                    android:textColor="@color/azulpetro"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="wrap_content"
+                android:layout_height="4dp"
+                android:layout_margin="24sp"
+                android:layout_weight="1"
+                android:background="#997E7E7E" />
+
+
+            <LinearLayout
+                android:id="@+id/linearLayoutinfodatos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+
+                <TextView
+                    android:id="@+id/Infocantidadticket"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15sp"
+                    android:layout_marginEnd="10sp"
+                    android:textAlignment="center"
+                    android:text="0000.000"
+                    android:textColor="@color/azulpetro"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/Tvtcantticket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="|"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/Infounidadticket"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1sp"
+                    android:layout_marginEnd="10sp"
+                    android:textAlignment="center"
+                    android:text="LTS"
+                    android:textColor="@color/azulpetro"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/Tvtuniticket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="|"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/Infoprecioticket"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1sp"
+                    android:layout_marginEnd="10sp"
+                    android:textAlignment="center"
+                    android:text="$000.00"
+                    android:textColor="@color/azulpetro"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/Tvtpreticket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="|"
+                    android:textAlignment="center"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/Infoimporteticket"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1sp"
+                    android:layout_marginEnd="10sp"
+                    android:text="$000.00"
+                    android:textAlignment="center"
+                    android:textColor="@color/azulpetro"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="wrap_content"
+                android:layout_height="4dp"
+                android:layout_margin="24sp"
+                android:layout_marginTop="40dp"
+                android:layout_weight="1"
+                android:background="#997E7E7E" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+            <TextView
+                android:id="@+id/Totalticket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total: "
+                android:textColor="@color/azulpetro"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/Tvttotalticket"
+                android:layout_width="288dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="$00.00"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/TvttotalMnticket"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="$00/00.00 M.N"
+                    android:textSize="20dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                <TextView
+                    android:id="@+id/TvtDatosClienteticket"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="TICKET DEL CLIENTE"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearTipodeOperacionCopia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+
+                <TextView
+                    android:id="@+id/TipodeOperacionticketCopia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Tipo de Operación: "
+                    android:textColor="@color/azulpetro"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/TvtTipodeOperacionticketCopia"
+                    android:layout_width="167dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="La Caja"
+                    android:textSize="20dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearAutorizacioncopia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+
+                <TextView
+                    android:id="@+id/AutorizacionticketCopia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Autorización: "
+                    android:textColor="@color/azulpetro"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/TvtAutorizacionticketCopia"
+                    android:layout_width="217dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textSize="20dp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearTarjetaCopia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+
+                <TextView
+                    android:id="@+id/TarjetaticketCopia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Tarjeta: "
+                    android:textColor="@color/azulpetro"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/TvtTarjetaticketCopia"
+                    android:layout_width="266dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="****-****-****-"
+                    android:textSize="20dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearMonederoCopia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+
+                <TextView
+                    android:id="@+id/MonederoticketCopia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Monedero: "
+                    android:textColor="@color/azulpetro"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/TvtMonederoticketCopia"
+                    android:layout_width="239dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="La Caja"
+                    android:textSize="20dp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearPlacasCopia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+
+                <TextView
+                    android:id="@+id/PlacasticketCopia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Placas: "
+                    android:textColor="@color/azulpetro"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/TvtPlacasticketCopia"
+                    android:layout_width="268dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textSize="20dp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearChoferCopia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+
+                <TextView
+                    android:id="@+id/ChoferticketCopia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Chofer: "
+                    android:textColor="@color/azulpetro"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/TvtChoferticketCopia"
+                    android:layout_width="268dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textSize="20dp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearClienteCopia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+
+                <TextView
+                    android:id="@+id/ClienteticketCopia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Cliente: "
+                    android:textColor="@color/azulpetro"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/TvtClienteticketCopia"
+                    android:layout_width="267dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textSize="20dp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearOdometroCopia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="20dp"
+
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+
+                <TextView
+                    android:id="@+id/OdometroticketCopia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Odometro: "
+                    android:textColor="@color/azulpetro"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/TvtOdometroticketCopia"
+                    android:layout_width="239dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textSize="20dp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearSaldoProxCompraCopia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="25sp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+
+                <TextView
+                    android:id="@+id/SaldoProxCompraticketCopia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Saldo próxima compra: "
+                    android:textColor="@color/azulpetro"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/TvtSaldoProxCompraticketCopia"
+                    android:layout_width="128dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textSize="20dp" />
+
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="62dp">
+
+                <Button
+
+                    android:id="@+id/bttnAnterior"
+                    android:layout_width="137dp"
+                    android:layout_height="58dp"
+                    android:layout_marginStart="136dp"
+                    android:layout_marginTop="4dp"
+                    android:backgroundTint="@color/rojopetro"
+                    android:text="Anterior"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

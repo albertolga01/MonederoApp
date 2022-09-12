@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:visibility="visible"
+    tools:context=".Login"
+    android:background="@drawable/bg_monedero_pantalla_login"
+    >
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="82dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="320dp"
+        android:layout_marginEnd="277dp"
+        android:text="Usuario"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="259dp"
+        android:text="Contraseña"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/eTxtUsuario"
+        app:layout_constraintTop_toBottomOf="@+id/eTxtUsuario" />
+
+    <EditText
+        android:id="@+id/eTxtUsuario"
+        android:layout_width="299dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="60dp"
+        android:ems="10"
+        android:hint="Ingresa usuario"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView17"
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+    <EditText
+        android:id="@+id/eTxtContraseña"
+        android:layout_width="305dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="108dp"
+        android:ems="10"
+        android:hint="Ingresa contraseña"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView18"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="122dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="36dp"
+        android:background="@color/naranjaCaja"
+        android:text="Ingresar"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/automatic_login" />
+
+    <CheckBox
+        android:id="@+id/remember_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:minHeight="48dp"
+        android:text="Recordar Contraseña"
+        android:buttonTint="@color/azulpetro"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/eTxtContraseña"
+        app:layout_constraintTop_toBottomOf="@+id/eTxtContraseña" />
+
+    <CheckBox
+        android:id="@+id/automatic_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:text="Iniciar Sesión Automáticamente"
+        android:textSize="12sp"
+        android:buttonTint="@color/azulpetro"
+        app:layout_constraintStart_toStartOf="@+id/eTxtContraseña"
+        app:layout_constraintTop_toBottomOf="@+id/remember_key" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Vehiculos"
+    android:orientation="vertical"
+    android:background="@drawable/bg_monedero_pantalla_principal"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="95dp"
+            android:layout_height="82dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="26dp"
+            app:layout_constraintEnd_toStartOf="@+id/txtVehiculos"
+            app:layout_constraintHorizontal_bias="0.433"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_camion_vector_blanco" />
+
+        <TextView
+            android:id="@+id/txtVehiculos"
+            android:layout_width="265dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="sans-serif-thin"
+            android:text="Vehículos"
+            android:textColor="@color/white"
+            android:textSize="60sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/contenedorVehiculos"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="sans-serif-thin"
+            android:padding="15dp"
+            android:scrollbars="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:text="Seleccione un vehículo:"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/txtVehiculos" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:id="@+id/txvIdVehiculo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Id Vehiculo:"
+                android:textColor="@color/verdepetro"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/eTxtVehiculo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:editable="false"
+                android:ems="10"
+                android:hint="Vehiculo"
+                android:inputType="none"
+                android:minHeight="48dp" />
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Modelo:"
+                android:textColor="@color/verdepetro"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/eTxtModelo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:editable="false"
+                android:ems="10"
+                android:hint="Modelo"
+                android:inputType="none"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Año:"
+                android:textColor="@color/verdepetro"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/eTxtano"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:editable="false"
+                android:ems="10"
+                android:hint="Año"
+                android:inputType="none"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Placas:"
+                android:textColor="@color/verdepetro"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/eTxtPlacas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:editable="false"
+                android:ems="10"
+                android:hint="Placas"
+                android:inputType="none"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No.Económico"
+                android:textColor="@color/verdepetro"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/eTxtNoEconomico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:editable="false"
+                android:ems="10"
+                android:hint="No.Económico"
+                android:inputType="none" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tipo de vehículo:"
+                android:textColor="@color/verdepetro"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/eTxtTipoVehiculo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:editable="false"
+                android:ems="10"
+                android:hint="Tipo de vehiculo"
+                android:inputType="none" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Controla odometro:"
+                android:textColor="@color/verdepetro"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/eTxtControlaOdometro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:editable="false"
+                android:ems="10"
+                android:hint="Controla odometro"
+                android:inputType="none" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="KM máximo por carga:"
+                android:textColor="@color/verdepetro"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/eTxtKmMaximoCarga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:editable="false"
+                android:ems="10"
+                android:hint="KM máximo por carga"
+                android:inputType="none" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Variación:"
+                android:textColor="@color/verdepetro"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/eTxtVariacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:editable="false"
+                android:ems="10"
+                android:hint="Variación"
+                android:inputType="none" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Odometro inicial:"
+                android:textColor="@color/verdepetro"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/eTxtOdometroInicial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:editable="false"
+                android:ems="10"
+                android:hint="Odometro inicial"
+                android:inputType="none" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rend. promedio:"
+                android:textColor="@color/verdepetro"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/eTxtRendPromedio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:editable="false"
+                android:ems="10"
+                android:hint="Rend. promedio"
+                android:inputType="none" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Centro costos/Dpto:"
+                android:textColor="@color/verdepetro"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/eTxtCentroCostoDpto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:editable="false"
+                android:ems="10"
+                android:hint="Centro costos/Dpto"
+                android:inputType="none" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tarjeta"
+                android:textColor="@color/verdepetro"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/eTxtTarjeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:editable="false"
+                android:ems="10"
+                android:hint="Tarjeta"
+                android:inputType="none" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Activo/Inactivo"
+                android:textColor="@color/verdepetro"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxActivo"
+                android:layout_width="180dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="35dp"
+                android:buttonTint="@color/verdepetro"
+                android:text="Activo"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <Button
+                android:id="@+id/btnActualizarVehiculo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/azulpetro"
+                android:text="Actualizar"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnLimpiarDatosVehiculo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/azulpetro"
+                android:text="Limpiar Campos"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
